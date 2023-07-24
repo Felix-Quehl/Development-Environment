@@ -1,10 +1,10 @@
 " disable legacy stuff
 set nocompatible
- 
+
 " relative numbers
 set number relativenumber
 set nu rnu
- 
+
 " enable syntax highlighting
 syntax on
 filetype plugin on
@@ -19,9 +19,13 @@ highlight ExtraWhitespace ctermbg=red guibg=red
 :match ExtraWhitespace /[^\t]\zs\t\+/
 " Show spaces used for indenting (so you use only tabs for indenting).
 :match ExtraWhitespace /^\t*\zs \+/
- 
+
 " fuzzy file search
 command! Ctags !ctags -R .
- 
+
 " tab size
 set tabstop=4
+
+" fizzy file search
+set path+=**
+set wildmenu
