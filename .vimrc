@@ -11,14 +11,8 @@ filetype plugin on
 
 " whitespace highlighting
 highlight ExtraWhitespace ctermbg=red guibg=red
-" Show trailing whitespace:
-:match ExtraWhitespace /\s\+$/
 " Show trailing whitespace and spaces before a tab:
 :match ExtraWhitespace /\s\+$\| \+\ze\t/
-" Show tabs that are not at the start of a line:
-:match ExtraWhitespace /[^\t]\zs\t\+/
-" Show spaces used for indenting (so you use only tabs for indenting).
-:match ExtraWhitespace /^\t*\zs \+/
 
 " fuzzy file search
 command! Ctags !ctags -R .
@@ -29,3 +23,4 @@ set tabstop=4
 " fizzy file search
 set path+=**
 set wildmenu
+set wildmode=longest:full,full
